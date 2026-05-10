@@ -23,5 +23,3 @@ The system also includes a dashboard overview showing statistics for total books
   - View users and their uploaded books
   - Create, update, and delete users
 - Book ownership enforcement using policies
-
-

@@ -15,35 +15,47 @@
                 <!-- Name -->
                 <div>
                     <label class="block text-gray-700 font-semibold mb-2">Name</label>
-                    <input type="text" name="name"
-                        class="w-full border-gray-300 rounded-xl shadow-sm focus:ring focus:ring-blue-200"
+                    <input type="text" name="name" value="{{ old('name') }}"
+                        class="w-full border-gray-300 rounded-xl shadow-sm focus:ring focus:ring-blue-200 @error('name') border-red-500 @enderror"
                         placeholder="Enter full name">
+                    @error('name')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <!-- Email -->
                 <div>
                     <label class="block text-gray-700 font-semibold mb-2">Email</label>
-                    <input type="email" name="email"
-                        class="w-full border-gray-300 rounded-xl shadow-sm focus:ring focus:ring-blue-200"
+                    <input type="email" name="email" value="{{ old('email') }}"
+                        class="w-full border-gray-300 rounded-xl shadow-sm focus:ring focus:ring-blue-200 @error('email') border-red-500 @enderror"
                         placeholder="Enter email address">
+                    @error('email')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <!-- Password -->
                 <div>
                     <label class="block text-gray-700 font-semibold mb-2">Password</label>
                     <input type="password" name="password"
-                        class="w-full border-gray-300 rounded-xl shadow-sm focus:ring focus:ring-blue-200"
+                        class="w-full border-gray-300 rounded-xl shadow-sm focus:ring focus:ring-blue-200 @error('password') border-red-500 @enderror"
                         placeholder="Enter password">
+                    @error('password')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <!-- Role -->
                 <div>
                     <label class="block text-gray-700 font-semibold mb-2">Role</label>
                     <select name="role"
-                        class="w-full border-gray-300 rounded-xl shadow-sm focus:ring focus:ring-blue-200">
-                        <option value="user">User</option>
-                        <option value="admin">Admin</option>
+                        class="w-full border-gray-300 rounded-xl shadow-sm focus:ring focus:ring-blue-200 @error('role') border-red-500 @enderror">
+                        <option value="user" {{ old('role') == 'user' ? 'selected' : '' }}>User</option>
+                        <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
                     </select>
+                    @error('role')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <!-- Buttons -->
