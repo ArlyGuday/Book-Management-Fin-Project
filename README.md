@@ -24,19 +24,4 @@ The system also includes a dashboard overview showing statistics for total books
   - Create, update, and delete users
 - Book ownership enforcement using policies
 
-## Optional submission notes
-- Repository link: https://github.com/ArlyGuday/Book-Management-Fin-Project
-- Current branch: `main`
-
-## Screen recording checklist
-Record a short screen video showing the following flows:
-1. Register or login to the app
-2. Open the dashboard and display the overview statistics
-3. Create a book and show it in the book list
-4. Edit a book and save changes
-5. View a book details page
-6. Delete a book
-7. Show admin user management screens (users list and user details)
-
-> The screen record should capture all implemented functionalities and features for the final submission.
 
