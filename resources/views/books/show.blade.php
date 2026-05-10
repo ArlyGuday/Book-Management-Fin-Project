@@ -8,6 +8,13 @@
     <div class="min-h-screen bg-gray-100 py-10">
         <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-lg p-8">
 
+            {{-- SUCCESS MESSAGE --}}
+            @if(session('success'))
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-xl mb-6">
+                    {{ session('success') }}
+                </div>
+            @endif
+
             <h1 class="text-3xl font-bold text-gray-800 mb-2">
                 {{ $book->title }}
             </h1>

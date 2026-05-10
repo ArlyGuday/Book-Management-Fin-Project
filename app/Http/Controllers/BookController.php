@@ -39,7 +39,7 @@ class BookController extends Controller
             'description' => $request->description,
         ]);
 
-        return redirect()->route('books.index');
+        return redirect()->route('books.index')->with('success', 'Book created successfully');
     }
 
     // Show book details
@@ -69,7 +69,7 @@ class BookController extends Controller
 
         $book->update($request->only(['title', 'author', 'description']));
 
-        return redirect()->route('books.index');
+        return redirect()->route('books.index')->with('success', 'Book updated successfully');
     }
 
     // Delete book
@@ -79,6 +79,6 @@ class BookController extends Controller
 
         $book->delete();
 
-        return back();
+        return back()->with('success', 'Book deleted successfully');
     }
 }

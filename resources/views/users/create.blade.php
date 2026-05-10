@@ -66,7 +66,7 @@
                         Cancel
                     </a>
 
-                    <button type="submit"
+                    <button type="submit" onclick="return confirm('Are you sure you want to create this new user?')"
                         class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-black-800 font-semibold">
                         Save User
                     </button>

@@ -23,6 +23,13 @@
 
         <div class="max-w-7xl mx-auto px-6">
 
+            {{-- SUCCESS MESSAGE --}}
+            @if(session('success'))
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-xl mb-6">
+                    {{ session('success') }}
+                </div>
+            @endif
+
             @if($books->isEmpty())
 
                 <div class="bg-white rounded-3xl shadow-lg p-16 text-center">

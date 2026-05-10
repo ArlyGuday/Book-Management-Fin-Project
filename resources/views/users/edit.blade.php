@@ -9,6 +9,13 @@
 
         <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-lg p-8">
 
+            {{-- SUCCESS MESSAGE --}}
+            @if(session('success'))
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-xl mb-6">
+                    {{ session('success') }}
+                </div>
+            @endif
+
             <form method="POST" action="{{ route('users.update', $user) }}" class="space-y-6">
                 @csrf
                 @method('PUT')
@@ -64,7 +71,7 @@
                         Cancel
                     </a>
 
-                    <button type="submit"
+                    <button type="submit" onclick="return confirm('Are you sure you want to update this user?')"
                         class="px-5 py-2 rounded-xl bg-yellow-500 hover:bg-yellow-600 text-black-800 font-semibold">
                         Update User
                     </button>
